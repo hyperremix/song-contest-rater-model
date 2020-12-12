@@ -1,2 +1,9 @@
 tsconfig.json
 src
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+.github
+.prettierignore
+.prettierrc
