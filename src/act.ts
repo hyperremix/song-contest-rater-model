@@ -2,6 +2,7 @@ export interface Act {
   id?: string;
   artistName: string;
   songName: string;
+  imageUrl?: string;
 }
 
 export const actSchema = {
@@ -14,6 +15,9 @@ export const actSchema = {
       type: 'string',
     },
     songName: {
+      type: 'string',
+    },
+    imageUrl: {
       type: 'string',
     },
   },
