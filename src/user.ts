@@ -3,6 +3,7 @@ export interface User {
   email: string;
   firstname: string;
   lastname: string;
+  avatarUrl: string;
 }
 
 export const userSchema = {
@@ -20,6 +21,9 @@ export const userSchema = {
     lastname: {
       type: 'string',
     },
+    avatarUrl: {
+      type: 'string',
+    },
   },
 };
 
@@ -28,4 +32,5 @@ export const defaultUser: User = {
   email: 'john.doe@songcontestrater.com',
   firstname: 'John',
   lastname: 'Doe',
+  avatarUrl: 'songcontestrater.com/logo192.png',
 };
