@@ -4,6 +4,8 @@ export interface User {
   firstname: string;
   lastname: string;
   avatarUrl: string;
+  gravatarUrl: string;
+  useGravatar: boolean;
 }
 
 export const userSchema = {
@@ -24,6 +26,12 @@ export const userSchema = {
     avatarUrl: {
       type: 'string',
     },
+    gravatarUrl: {
+      type: 'string',
+    },
+    useGravatar: {
+      type: 'boolean',
+    },
   },
 };
 
@@ -33,4 +41,6 @@ export const defaultUser: User = {
   firstname: 'John',
   lastname: 'Doe',
   avatarUrl: 'songcontestrater.com/logo192.png',
+  gravatarUrl: 'https://s.gravatar.com/avatar/a38c89eba770032ba4c617ba97f3138e?s=80',
+  useGravatar: false,
 };
