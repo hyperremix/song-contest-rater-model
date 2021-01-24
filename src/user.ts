@@ -6,6 +6,7 @@ export interface User {
   avatarUrl: string;
   gravatarUrl: string;
   useGravatar: boolean;
+  ratingIds: string[];
 }
 
 export const userSchema = {
@@ -32,6 +33,12 @@ export const userSchema = {
     useGravatar: {
       type: 'boolean',
     },
+    ratingIds: {
+      type: 'array',
+      items: {
+        type: 'string',
+      },
+    },
   },
 };
 
@@ -43,4 +50,5 @@ export const defaultUser: User = {
   avatarUrl: 'songcontestrater.com/logo192.png',
   gravatarUrl: 'https://s.gravatar.com/avatar/a38c89eba770032ba4c617ba97f3138e',
   useGravatar: false,
+  ratingIds: ['84ce3ed6-a479-4ba4-86e1-d053638fd8a1'],
 };

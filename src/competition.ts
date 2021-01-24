@@ -6,6 +6,7 @@ export interface Competition {
   startTime: Date;
   imageUrl: string;
   actIds: string[];
+  ratingIds: string[];
 }
 
 export const competitionSchema = {
@@ -37,6 +38,12 @@ export const competitionSchema = {
         type: 'string',
       },
     },
+    ratingIds: {
+      type: 'array',
+      items: {
+        type: 'string',
+      },
+    },
   },
 };
 
@@ -48,4 +55,5 @@ export const defaultCompetition: Competition = {
   startTime: new Date(),
   imageUrl: 'https://imageurl.example.com/img.jpg',
   actIds: ['84ce3ed6-a479-4ba4-86e1-d053638fd8a1'],
+  ratingIds: ['84ce3ed6-a479-4ba4-86e1-d053638fd8a1'],
 };
